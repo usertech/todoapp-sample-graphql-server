@@ -1,0 +1,52 @@
+service: uplus-cig-server
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: eu-west-1
+  environment:
+    TABLE_NAME: ${self:service}-${self:provider.stage}-todos
+    
+plugins:
+  - serverless-offline
+  - serverless-dynamodb-local
+
+custom:
+  dynamodb:
+      start:
+        port: 8000
+        inMemory: true
+        migrate: true
+
+resources:
+  Resources:
+    ExampleDynamoDB:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.TABLE_NAME}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+functions:
+  graphql:
+    handler: handler.server
+    events:
+    - http:
+        path: /
+        method: post
+        cors: true
+  playground:
+    handler: handler.playground
+    events:
+    - http:
+        path: /
+        method: get
+        cors: true

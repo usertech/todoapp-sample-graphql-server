@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/local/bin/node /Users/brabeji/.yarn/bin/yarn.js init
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/brabeji/.config/yarn/global/node_modules:/Users/brabeji/.yarn/bin:/usr/local/bin:/user/school/y2/swe/tarql/target/appassembler/bin:/user/dev/android-sdk-macosx/platform-tools:/user/dev/android-sdk-macosx/tools:/usr/local/heroku/bin:/Applications/MAMP/bin/php/php5.6.7/bin:/Applications/MAMP/bin:/Applications/MAMP/Library/bin:~/.composer/vendor/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/TeX/texbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/brabeji/.config/yarn/global/node_modules:/Users/brabeji/.yarn/bin:/user/school/y2/swe/tarql/target/appassembler/bin:/user/dev/android-sdk-macosx/platform-tools:/user/dev/android-sdk-macosx/tools:/usr/local/heroku/bin:/Applications/MAMP/bin/php/php5.6.7/bin:/Applications/MAMP/bin:/Applications/MAMP/Library/bin:~/.composer/vendor/bin/:/Users/brabeji/dev/spring-boot-cli/bin:/Users/brabeji/dev/spring-boot-cli/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.12.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/brabeji/.yarn/lib/cli.js:126002:13)
+      at emitNone (events.js:106:13)
+      at Interface.emit (events.js:208:7)
+      at Interface._ttyWrite (readline.js:774:16)
+      at ReadStream.onkeypress (readline.js:158:10)
+      at emitTwo (events.js:126:13)
+      at ReadStream.emit (events.js:214:7)
+      at emitKeys (internal/readline.js:420:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1010:36)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
